@@ -48,11 +48,11 @@
                     <a class="navbar-brand" runat="server" href="~/">Application name</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                   <%-- <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
+                    </ul>--%>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
@@ -69,6 +69,28 @@
                             </ul>
                         </LoggedInTemplate>
                     </asp:LoginView>
+                    <asp:Menu ID="navMenu" runat="server"
+                         BackColor="#222222" BorderColor="Red"
+                         StaticMenuItemStyle-ForeColor="#999999"
+                         StaticMenuItemStyle-VerticalPadding="10px"
+                         StaticMenuItemStyle-HorizontalPadding="10px"
+                         RenderingMode="List" Orientation="Horizontal"
+                         DynamicMenuItemStyle-ForeColor="#999999"
+                         DynamicMenuItemStyle-BackColor="#222222">
+                        <Items>
+                            <asp:MenuItem Text="Home"
+                                 NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="About"
+                                 NavigateUrl="~/About.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Contact"
+                                 NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Samples" Value="Samples">
+                                <asp:MenuItem Text="Review CRUD"
+                                     NavigateUrl="~/SamplePages/FilterSearchCRUD.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
                 </div>
             </div>
         </div>

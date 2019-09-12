@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApp {
+namespace WebApp.SamplePages {
     
     
-    public partial class SiteMaster {
+    public partial class FilterSearchCRUD {
         
         /// <summary>
-        /// navMenu control.
+        /// label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu navMenu;
+        protected global::System.Web.UI.WebControls.Label label1;
         
         /// <summary>
-        /// MainContent control.
+        /// ArtistList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.DropDownList ArtistList;
     }
 }
