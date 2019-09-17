@@ -39,7 +39,7 @@ namespace ChinookSystem.BLL
                 var results = from x in context.Albums
                               where x.ArtistId == artistid
                               select x;
-
+               
                 return results.ToList();
             }
         }

@@ -13,6 +13,15 @@ namespace WebApp.SamplePages {
     public partial class FilterSearchCRUD {
         
         /// <summary>
+        /// MessageUserControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DMIT2018Common.UserControls.MessageUserControl MessageUserControl;
+        
+        /// <summary>
         /// label1 control.
         /// </summary>
         /// <remarks>

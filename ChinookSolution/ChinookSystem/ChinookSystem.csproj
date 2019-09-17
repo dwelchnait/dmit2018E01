@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BLL\AlbumController.cs" />
     <Compile Include="BLL\ArtistController.cs" />
+    <Compile Include="BLL\BusinessRuleException.cs" />
     <Compile Include="DAL\ChinookContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
