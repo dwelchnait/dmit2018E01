@@ -6,28 +6,18 @@ namespace ChinookSystem.Data.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Album
+    public partial class MediaType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Album()
+        public MediaType()
         {
             Tracks = new HashSet<Track>();
         }
 
-        public int AlbumId { get; set; }
+        public int MediaTypeId { get; set; }
 
-        [Required(ErrorMessage ="Album title is required")]
-        [StringLength(160,ErrorMessage ="Album title is limited to 160 characters")]
-        public string Title { get; set; }
-
-        public int ArtistId { get; set; }
-
-        public int ReleaseYear { get; set; }
-
-        [StringLength(50, ErrorMessage = "Album label is limited to 50 characters")]
-        public string ReleaseLabel { get; set; }
-
-        public virtual Artist Artist { get; set; }
+        [StringLength(120)]
+        public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Track> Tracks { get; set; }
