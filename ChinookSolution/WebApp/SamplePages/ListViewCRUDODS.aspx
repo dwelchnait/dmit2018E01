@@ -59,7 +59,7 @@
             </asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegExTitleTextBoxE" runat="server" 
                 ErrorMessage="Title is limited to 160 characters" Display="None"
-                 ControlToValidate="TitleTextBoxE" ValidationGroup="IGroup"
+                 ControlToValidate="TitleTextBoxE" ValidationGroup="EGroup"
                  ValidationExpression="^.{1,160}$">
             </asp:RegularExpressionValidator>
             <asp:RequiredFieldValidator ID="RequiredReleaseYearTextBoxE" runat="server" 
@@ -74,12 +74,13 @@
             </asp:RangeValidator>
              <asp:RegularExpressionValidator ID="RegExReleaseLabelTextBoxE" runat="server" 
                 ErrorMessage="Label is limited to 50 characters" Display="None"
-                 ControlToValidate="ReleaseLabelTextBoxE" ValidationGroup="IGroup"
+                 ControlToValidate="ReleaseLabelTextBoxE" ValidationGroup="EGroup"
                  ValidationExpression="^.{0,50}$">
             </asp:RegularExpressionValidator>
             <tr style="background-color: #999999;">
                 <td>
-                    <asp:Button runat="server" CommandName="Update" Text="Update" ID="UpdateButton" />
+                    <asp:Button runat="server" CommandName="Update" Text="Update" ID="UpdateButton" 
+                         ValidationGroup="EGroup"/>
                     <asp:Button runat="server" CommandName="Cancel" Text="Cancel" ID="CancelButton" />
                 </td>
                 <td>
@@ -103,7 +104,7 @@
                         ID="ReleaseYearTextBoxE" 
                          Width="50px"/></td>
                 <td>
-                    <asp:TextBox Text='<%# Bind("ReleaseLabel") %>' runat="server" ID="ReleaseLabelTextBox" /></td>
+                    <asp:TextBox Text='<%# Bind("ReleaseLabel") %>' runat="server" ID="ReleaseLabelTextBoxE" /></td>
               
             </tr>
         </EditItemTemplate>
@@ -126,11 +127,11 @@
             </asp:RegularExpressionValidator>
             <asp:RequiredFieldValidator ID="RequiredReleaseYearTextBoxI" runat="server" 
                 ErrorMessage="Year is required" Display="None" 
-                 ControlToValidate="ReleaseYearTextBoxI" ValidationGroup="EGroup">
+                 ControlToValidate="ReleaseYearTextBoxI" ValidationGroup="IGroup">
             </asp:RequiredFieldValidator>
             <asp:RangeValidator ID="RangeReleaseYearTextBoxI" runat="server" 
                 ErrorMessage="Year must be between 1950 and today" Display="None"
-                 ControlToValidate="ReleaseYearTextBoxI" ValidationGroup="EGroup"
+                 ControlToValidate="ReleaseYearTextBoxI" ValidationGroup="IGroup"
                  MinimumValue="1950" MaximumValue='<%# DateTime.Today.Year %>'
                  Type="Integer">
             </asp:RangeValidator>
@@ -141,7 +142,8 @@
             </asp:RegularExpressionValidator>
             <tr style="">
                 <td>
-                    <asp:Button runat="server" CommandName="Insert" Text="Insert" ID="InsertButton" />
+                    <asp:Button runat="server" CommandName="Insert" Text="Insert" ID="InsertButton"
+                         ValidationGroup="IGroup"/>
                     <asp:Button runat="server" CommandName="Cancel" Text="Clear" ID="CancelButton" />
                 </td>
                 <td>
