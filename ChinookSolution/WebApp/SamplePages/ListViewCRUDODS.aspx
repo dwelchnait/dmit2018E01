@@ -62,7 +62,7 @@
                  ControlToValidate="TitleTextBoxE" ValidationGroup="EGroup"
                  ValidationExpression="^.{1,160}$">
             </asp:RegularExpressionValidator>
-            <asp:RequiredFieldValidator ID="RequiredReleaseYearTextBoxE" runat="server" 
+<%--            <asp:RequiredFieldValidator ID="RequiredReleaseYearTextBoxE" runat="server" 
                 ErrorMessage="Year is required" Display="None" 
                  ControlToValidate="ReleaseYearTextBoxE" ValidationGroup="EGroup">
             </asp:RequiredFieldValidator>
@@ -71,7 +71,7 @@
                  ControlToValidate="ReleaseYearTextBoxE" ValidationGroup="EGroup"
                  MinimumValue="1950" MaximumValue='<%# DateTime.Today.Year %>'
                  Type="integer">
-            </asp:RangeValidator>
+            </asp:RangeValidator>--%>
              <asp:RegularExpressionValidator ID="RegExReleaseLabelTextBoxE" runat="server" 
                 ErrorMessage="Label is limited to 50 characters" Display="None"
                  ControlToValidate="ReleaseLabelTextBoxE" ValidationGroup="EGroup"
@@ -125,7 +125,7 @@
                  ControlToValidate="TitleTextBoxI" ValidationGroup="IGroup"
                  ValidationExpression="^.{1,160}$">
             </asp:RegularExpressionValidator>
-            <asp:RequiredFieldValidator ID="RequiredReleaseYearTextBoxI" runat="server" 
+<%--            <asp:RequiredFieldValidator ID="RequiredReleaseYearTextBoxI" runat="server" 
                 ErrorMessage="Year is required" Display="None" 
                  ControlToValidate="ReleaseYearTextBoxI" ValidationGroup="IGroup">
             </asp:RequiredFieldValidator>
@@ -134,7 +134,7 @@
                  ControlToValidate="ReleaseYearTextBoxI" ValidationGroup="IGroup"
                  MinimumValue="1950" MaximumValue='<%# DateTime.Today.Year %>'
                  Type="Integer">
-            </asp:RangeValidator>
+            </asp:RangeValidator>--%>
             <asp:RegularExpressionValidator ID="RegExReleaseLabelTextBoxI" runat="server" 
                 ErrorMessage="Label is limited to 50 characters" Display="None"
                  ControlToValidate="ReleaseLabelTextBoxI" ValidationGroup="IGroup"
