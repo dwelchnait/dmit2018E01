@@ -9,10 +9,11 @@
 
 void Main()
 {
+	string artistname = "th";
 	var results = from x in Albums
-				where x.Artist.Name.Equals("Deep Purple")
+				where x.Artist.Name.Contains(artistname)
 				orderby x.ReleaseYear, x.Title
-				select new AlbumsOfAtrist
+				select new AlbumsOfArtist
 				{
 					Title = x.Title,
 					ArtistName = x.Artist.Name,
@@ -23,7 +24,7 @@ void Main()
 }
 
 // Define other methods and classes here
-public class AlbumsOfAtrist
+public class AlbumsOfArtist
 {
 	public string Title {get;set;}
 	public string ArtistName {get;set;}
