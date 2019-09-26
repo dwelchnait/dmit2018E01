@@ -60,6 +60,7 @@ namespace ChinookSystem.BLL
             {
                 if (CheckReleaseYear(item))
                 {
+                    //item.Title = null; use to test entity validation
                     context.Albums.Add(item);   //staging
                     context.SaveChanges();      //committed
                     return item.AlbumId;        //return new id value
