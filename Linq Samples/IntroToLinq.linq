@@ -36,3 +36,54 @@ from x in Albums
 orderby x.Title
 where x.ReleaseYear == 1970
 select x
+
+//create a list of albums release between 2007 and 2018
+//order by release year then by title
+from x in Albums
+where x.ReleaseYear >= 2007
+   && x.ReleaseYear <=2018
+orderby x.ReleaseYear descending, x.Title
+select x
+
+//note the difference in method names using the method syntax
+// a descending orderby is .OrderByDescending
+// secondary and beyond ordering is .ThenBy
+Albums
+   .Where (x => ((x.ReleaseYear >= 2007) && (x.ReleaseYear <= 2018)))
+   .OrderByDescending (x => x.ReleaseYear)
+   .ThenBy (x => x.Title)
+
+//Can navigational properties by used in queries
+//create a list of albums by Deep Purple
+//order by release year and title
+//Show only the title, artist name, release year and release label
+
+//use the navigational properties to obtain the Artist data
+//new {....} create a new dataset (class definition)
+from x in Albums
+where x.Artist.Name.Equals("Deep Purple")
+orderby x.ReleaseYear, x.Title
+select new
+{
+	Title = x.Title,
+	ArtistName = x.Artist.Name,
+	RYear = x.ReleaseYear,
+	RLabel = x.ReleaseLabel
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
