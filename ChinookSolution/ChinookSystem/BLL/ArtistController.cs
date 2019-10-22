@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 #region Additional Namespaces
+using ChinookSystem.Data.POCOs;
 using ChinookSystem.DAL;
 using ChinookSystem.Data.Entities;
 using System.ComponentModel;
@@ -31,5 +32,21 @@ namespace ChinookSystem.BLL
                 return context.Artists.Find(artistid);
             }
         }
+
+        //[DataObjectMethod(DataObjectMethodType.Select, false)]
+        //public List<SelectionList> List_ArtistNames()
+        //{
+        //    using (var context = new ChinookContext())
+        //    {
+        //        var results = from x in context.Artists
+        //                      orderby x.Name
+        //                      select new SelectionList
+        //                      {
+        //                          IDValueField = x.ArtistId,
+        //                          DisplayText = x.Name
+        //                      };
+        //        return results.ToList();
+        //    }
+        //}
     }
 }

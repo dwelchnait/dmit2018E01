@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 #region Additional Namespaces
+using ChinookSystem.Data.POCOs;
 using ChinookSystem.DAL;
 using ChinookSystem.Data.Entities;
 using System.ComponentModel;
 using DMIT2018Common.UserControls;
-using ChinookSystem.Data.POCOs;
 using ChinookSystem.Data.DTOs;
 #endregion
 
@@ -99,10 +99,27 @@ namespace ChinookSystem.BLL
                 return results.ToList();
             }
         }
-        #endregion
 
-        #region Add, Update, Delete
-        [DataObjectMethod(DataObjectMethodType.Insert,false)]
+        //[DataObjectMethod(DataObjectMethodType.Select, false)]
+        //public List<SelectionList> List_AlbumNames()
+        //{
+        //    using (var context = new ChinookContext())
+        //    {
+        //        var results = from x in context.Albums
+        //                      orderby x.Title
+        //                      select new SelectionList
+        //                      {
+        //                          IDValueField = x.AlbumId,
+        //                          DisplayText = x.Title
+        //                      };
+        //        return results.ToList();
+        //    }
+        //}
+    
+    #endregion
+
+    #region Add, Update, Delete
+    [DataObjectMethod(DataObjectMethodType.Insert,false)]
         public int Album_Add(Album item)
         {
             using (var context = new ChinookContext())

@@ -193,6 +193,7 @@
     <Content Include="SamplePages\DisplayArtistAlbums.aspx" />
     <Content Include="SamplePages\FilterSearchCRUD.aspx" />
     <Content Include="SamplePages\ListViewCRUDODS.aspx" />
+    <Content Include="SamplePages\ManagePlaylist.aspx" />
     <Content Include="SamplePages\RepeaterDisplay.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -386,6 +387,13 @@
     </Compile>
     <Compile Include="SamplePages\ListViewCRUDODS.aspx.designer.cs">
       <DependentUpon>ListViewCRUDODS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePages\ManagePlaylist.aspx.cs">
+      <DependentUpon>ManagePlaylist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamplePages\ManagePlaylist.aspx.designer.cs">
+      <DependentUpon>ManagePlaylist.aspx</DependentUpon>
     </Compile>
     <Compile Include="SamplePages\RepeaterDisplay.aspx.cs">
       <DependentUpon>RepeaterDisplay.aspx</DependentUpon>
