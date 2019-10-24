@@ -198,7 +198,7 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Name">
                     <ItemTemplate>
-                        <asp:Label runat="server" ID="TrachName"
+                        <asp:Label runat="server" ID="TrackName"
                             Text='<%# Eval("TrackName") %>'></asp:Label>
                           &nbsp;&nbsp;
                     </ItemTemplate>
@@ -245,11 +245,14 @@
         OldValuesParameterFormatString="original_{0}" 
         SelectMethod="List_TracksForPlaylistSelection" 
         TypeName="ChinookSystem.BLL.TrackController"
-         OnSelected="CheckForException"
-         >
+         OnSelected="CheckForException">
         <SelectParameters>
-            <asp:ControlParameter ControlID="TracksBy" PropertyName="Text" Name="tracksby" Type="String"></asp:ControlParameter>
-            <asp:ControlParameter ControlID="SearchArg" PropertyName="Text" Name="arg" Type="String"></asp:ControlParameter>
+            <asp:ControlParameter ControlID="TracksBy" 
+                PropertyName="Text" Name="tracksby" Type="String">
+            </asp:ControlParameter>
+            <asp:ControlParameter ControlID="SearchArg" 
+                PropertyName="Text" Name="arg" Type="String">
+            </asp:ControlParameter>
         </SelectParameters>
     </asp:ObjectDataSource>
 
