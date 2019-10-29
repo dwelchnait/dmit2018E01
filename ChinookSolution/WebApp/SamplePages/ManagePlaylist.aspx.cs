@@ -150,8 +150,41 @@ namespace Jan2018DemoWebsite.SamplePages
         protected void TracksSelectionList_ItemCommand(object sender, 
             ListViewCommandEventArgs e)
         {
-            //code to go here
-            
+            //do we have the playlist name
+            if (string.IsNullOrEmpty(PlaylistName.Text))
+            {
+                MessageUserControl.ShowInfo("Required Data",
+                    "Play list name is required to add a track");
+            }
+            else
+            {
+                //collect the required data for the event
+                string playlistname = PlaylistName.Text;
+                //the username will come from the form security
+                //so until security is added, we will use HansenB
+                string username = "HansenB";
+                //obtain the track id from the ListView
+                //the track id will be in the CommandArg property of the 
+                //    ListViewCommandEventArgs e instance
+                //the Commandarg in e is return as an object
+                //case it to a string, then you can .Parse the string
+                int trackid = int.Parse(e.CommandArgument.ToString());
+
+                //using the obtained data, issue your call to the BLL method
+                //this work will be done within a TryRun()
+                MessageUserControl.TryRun(() =>
+                {
+                    PlaylistTracksController sysmgr = new PlaylistTracksController();
+                    //there is ONLY one call to add the data to the database
+                    sysmgr.Add_TrackToPLaylist(playlistname, username, trackid);
+                    //refresh the playlist is a READ
+                    List<UserPlaylistTrack> datainfo = sysmgr.List_TracksForPlaylist(
+                        playlistname, username);
+                    PlayList.DataSource = datainfo;
+                    PlayList.DataBind();
+                },"Adding a Track","Track has been added to the playlist");
+            }
+
         }
 
     }
