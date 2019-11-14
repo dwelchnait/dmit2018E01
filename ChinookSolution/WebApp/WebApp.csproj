@@ -230,6 +230,7 @@
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="WebConnectionStrings.config" />
+    <Content Include="WebAppSettings.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -402,6 +403,7 @@
     <Compile Include="SamplePages\RepeaterDisplay.aspx.designer.cs">
       <DependentUpon>RepeaterDisplay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Security\SecurityDbContextInitializer.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
