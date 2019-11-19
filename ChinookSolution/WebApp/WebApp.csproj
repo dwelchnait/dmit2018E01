@@ -223,6 +223,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Security\AccessDenied.aspx" />
+    <Content Include="Security\SecurityAdmin.aspx" />
     <Content Include="Site.Master" />
     <Content Include="UserControls\MessageUserControl.ascx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -403,6 +405,21 @@
     <Compile Include="SamplePages\RepeaterDisplay.aspx.designer.cs">
       <DependentUpon>RepeaterDisplay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Security\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\SecurityAdmin.aspx.cs">
+      <DependentUpon>SecurityAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\SecurityAdmin.aspx.designer.cs">
+      <DependentUpon>SecurityAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\SecurityController.cs" />
     <Compile Include="Security\SecurityDbContextInitializer.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

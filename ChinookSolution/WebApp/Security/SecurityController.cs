@@ -49,10 +49,9 @@ namespace WebApp.Security
             {
                 throw new Exception("Pick a customer or employee.");
             }
-            if (user.EmployeeId == 0)
-            {
-                user.EmployeeId = null;
-            }
+            
+            user.CustomerId = null;
+            
 
             IdentityResult result = UserManager.Create(user, ConfigurationManager.AppSettings["newUserPassword"]);
             CheckResult(result,"user", "add");

@@ -51,6 +51,7 @@
     <Compile Include="BLL\AlbumController.cs" />
     <Compile Include="BLL\ArtistController.cs" />
     <Compile Include="BLL\BusinessRuleException.cs" />
+    <Compile Include="BLL\CustomerController.cs" />
     <Compile Include="BLL\EmployeeController.cs" />
     <Compile Include="BLL\GenreController.cs" />
     <Compile Include="BLL\MediaTypeController.cs" />
