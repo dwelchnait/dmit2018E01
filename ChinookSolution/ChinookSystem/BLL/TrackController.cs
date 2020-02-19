@@ -94,7 +94,8 @@ namespace ChinookSystem.BLL
                                    Composer = x.Composer,
                                    Milliseconds = x.Milliseconds,
                                    Bytes = x.Bytes,
-                                   UnitPrice = x.UnitPrice
+                                   UnitPrice = x.UnitPrice,
+                                   dummyDate = DateTime.Now
                                }).Union(from x in context.Tracks
                                         where tracksby.Equals("Artist") ? x.Album.Artist.Name.Contains(argstring) :
                                               tracksby.Equals("Album") ? x.Album.Title.Contains(argstring) : false
@@ -109,7 +110,8 @@ namespace ChinookSystem.BLL
                                             Composer = x.Composer,
                                             Milliseconds = x.Milliseconds,
                                             Bytes = x.Bytes,
-                                            UnitPrice = x.UnitPrice
+                                            UnitPrice = x.UnitPrice,
+                                            dummyDate = DateTime.Now
                                         });
                 return results.ToList();
             }

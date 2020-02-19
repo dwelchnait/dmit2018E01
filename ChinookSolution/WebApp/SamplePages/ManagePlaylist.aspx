@@ -83,6 +83,8 @@
                             runat="server" ID="BytesLabel" /></td>
                     <td>
                         <asp:Label Text='<%# Eval("UnitPrice") %>' runat="server" ID="UnitPriceLabel" /></td>
+                    <td>
+                        <asp:Label Text='<%# string.Format("{0:h tt}",Eval("dummyDate")) %>' runat="server" ID="time" /></td>
                 </tr>
             </AlternatingItemTemplate>
            
@@ -120,6 +122,8 @@
                         <asp:Label Text='<%#string.Format("{0:0.00}",(int)Eval("Bytes") / 1000000m) %>' runat="server" ID="BytesLabel" /></td>
                     <td>
                         <asp:Label Text='<%# Eval("UnitPrice") %>' runat="server" ID="UnitPriceLabel" /></td>
+                    <td>
+                        <asp:Label Text='<%# string.Format("{0:h tt}",Eval("dummyDate")) %>' runat="server" ID="time" /></td>
                 </tr>
             </ItemTemplate>
             <LayoutTemplate>
@@ -138,6 +142,7 @@
                                     <th runat="server">Msec</th>
                                     <th runat="server">(MB)</th>
                                     <th runat="server">UnitPrice</th>
+                                    <th runat="server">Time</th>
                                 </tr>
                                 <tr runat="server" id="itemPlaceholder"></tr>
                             </table>

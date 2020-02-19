@@ -18,5 +18,7 @@ namespace ChinookSystem.Data.POCOs
         public int Milliseconds { get; set; }
         public int? Bytes { get; set; }
         public decimal UnitPrice { get; set; }
+
+        public DateTime dummyDate { get; set; }
     }
 }
